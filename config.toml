@@ -1,0 +1,27 @@
+baseurl = "https://sebastiensanzdesantamaria.net"
+title = "Sebastien Sanz de"
+theme = "hugo-theme-console"
+languageCode = "en-us"
+
+[params]
+  description = "Your site description"
+
+  # Set the animation style -- https://animate.style/
+  # To disable animations, please remove or comment animationStyle parameter
+  animateStyle = "animated zoomIn fast" 
+
+  [[params.navlinks]]
+  name = "about/"
+  url = "about/"
+
+ [[params.navlinks]]
+  name = "projects/"
+  url = "projects/"
+
+ [[params.navlinks]]
+  name = "clients/"
+  url = "clients/"
+
+  [[params.navlinks]]
+  name = "posts/"
+  url = "posts/"
