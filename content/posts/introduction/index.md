@@ -1,6 +1,6 @@
 +++
 title = "What is Hugo"
-date = "2019-07-01"
+date = "2019-07-01T00:00:00+07:00"
 +++
 
 Hugo is a fast and modern static site generator written in Go, and designed to make website creation fun again.
