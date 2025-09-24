@@ -1,4 +1,4 @@
-baseurl = "https://sebastiensanzdesantamaria.net"
+baseurl = "https://portfolio-hugo.k6khvjkz5t.workers.dev"
 title = "Sebastien Sanz de Santamaria"
 theme = "hugo-theme-console"
 languageCode = "en-us"
