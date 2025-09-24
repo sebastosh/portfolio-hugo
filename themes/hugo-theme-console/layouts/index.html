@@ -22,11 +22,11 @@ Web developer, cultural producer, and helper of artists. <a href="about/">(more)
 {{ end }}
 </div>  */}}
 
-<h1>Latest News</h1>
+<h1>Latest</h1>
 
 <div class="image-grid">
 {{ with .Site.GetPage "/projects" }}
-    {{ range first 3 (sort .Pages "Date" "desc")}}
+    {{ range first 6 (sort .Pages "Date" "desc")}}
         <a href="{{ .Permalink }}" title="{{ .Title }}">
         {{ $image := .Page.Resources.GetMatch .Params.image }}
         {{ with $image }}
