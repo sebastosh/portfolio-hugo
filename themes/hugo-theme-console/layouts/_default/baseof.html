@@ -30,24 +30,9 @@
 </head>
 <body class="terminal">
 <div class="container">
-  <div class="terminal-nav">
-    <div class="logo">
-      {{ $url := replace .Permalink ( printf "%s" .Site.BaseURL) "" }}
-      <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a> 
-      <p>Product Owner, Web Developer, Cultural Producer</p>
-    </div>
-    <nav class="terminal-menu">
-      <ul vocab="https://schema.org/" typeof="BreadcrumbList">
-        {{ range $index, $element := .Site.Params.navlinks }}
-        <li property="itemListElement" typeof="ListItem">
-          <a property="item" typeof="WebPage" href="{{ absURL .url }}">
-            <span property="name">{{ .name }}</span></a>
-          <meta property="position" content="{{ add $index 1}}" />
-        </li>
-        {{ end }}
-      </ul>
-    </nav>
-  </div>
+        {{ partial "header.html" . }}
+
+
   <div class="container {{ .Site.Params.animateStyle }}" >
       {{ block "main" . }}
       {{ end }}

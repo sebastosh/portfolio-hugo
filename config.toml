@@ -21,7 +21,3 @@ languageCode = "en-us"
  [[params.navlinks]]
   name = "clients"
   url = "clients/"
-
-  # [[params.navlinks]]
-  # name = "posts"
-  # url = "posts/"

@@ -1,34 +1,37 @@
 {{ define "main" }}
 
-{{/*  <h1>Latest posts</h1>   
- <div class="posts-list">
-{{ with .Site.GetPage "/posts" }}
-    {{ range first 3 (sort .Pages "Date" "desc" (where .Pages ".Params.private" "!=" true))}}
-        <div class="post">
-            <p>
-                <div class="date">{{ .Date | time.Format ":date_medium" }}</div>
-                <h1><a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a></h1>
-                {{ .Summary }}
-            </p>
-        </div>    
-    {{ end }}
-{{ end }}
-</div>  */}}
+{{/*  
+    {{ $sectionA_pages := where .Site.RegularPages "Section" "clients" }}
+    {{ $sectionB_pages := where .Site.RegularPages "Section" "projects" }}
+     {{ $combined_pages := $sectionA_pages | union $sectionB_pages }}
+
+echo {{ $combined_pages }}
+
+ */}}
+{{/*  
+{{ $pages := where .Site.RegularPages "Type" "not in" (slice "page" "about") }}
+    {{ range $pages  }}
+<h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+echo {{ .Params.image }}
+        <img src="{{ urls.RelRef .page .Params.image }}" alt="{{ .Title }}" class="img-responsive">
+
+    </a>
+{{ end }}   */}}
 
 <h1>Latest Projects:</h1>
 
 <div class="image-grid">
-{{ with .Site.GetPage "/projects" }}
+    {{ with .Site.GetPage "/projects" }}
     {{ range first 6 (sort .Pages "Date" "desc")}}
-        <a href="{{ .Permalink }}" title="{{ .Title }}">
+    <a href="{{ .Permalink }}" title="{{ .Title }}">
         {{ $image := .Page.Resources.GetMatch .Params.image }}
         {{ with $image }}
-            {{ $thumb := .Resize "400x" }}
-            <img src="{{ $thumb.RelPermalink }}" alt="{{ .Title }}" class="img-responsive">
+        {{ $thumb := .Resize "400x" }}
+        <img src="{{ $thumb.RelPermalink }}" alt="{{ .Title }}" class="img-responsive">
         {{end}}
-        </a>
+    </a>
     {{ end }}
-{{ end }}
+    {{ end }}
 </div>
 
 {{ end }}
