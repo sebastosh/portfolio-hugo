@@ -4,24 +4,24 @@ theme = "hugo-theme-console"
 languageCode = "en-us"
 
 [params]
-  description = "Your site description"
+  description = "Sebastien Sanz de Santamaria, software developer & cultural producer"
 
   # Set the animation style -- https://animate.style/
   # To disable animations, please remove or comment animationStyle parameter
-  animateStyle = "animated zoomIn fast" 
+  animateStyle = "animate__bounce" 
 
   [[params.navlinks]]
-  name = "about/"
+  name = "about"
   url = "about/"
 
  [[params.navlinks]]
-  name = "projects/"
+  name = "projects"
   url = "projects/"
 
  [[params.navlinks]]
-  name = "clients/"
+  name = "clients"
   url = "clients/"
 
   [[params.navlinks]]
-  name = "posts/"
+  name = "posts"
   url = "posts/"

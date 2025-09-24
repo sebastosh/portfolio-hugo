@@ -26,18 +26,17 @@
     {{- partial "twitter_cards.html" . -}}
     {{ template "_internal/google_analytics.html" . }}
 
-    {{- partial "header.html" . -}}
+    {{- partial "head.html" . -}}
 </head>
 <body class="terminal">
 <div class="container">
         <div class="terminal-nav">
           <header class="terminal-logo">
-            <div class="logo terminal-prompt">
+            <div class="logo">
               {{ $url := replace .Permalink ( printf "%s" .Site.BaseURL) "" }}
               {{ $.Scratch.Add "path" .Site.BaseURL }}
-              <a href="{{ .Site.BaseURL }}" class="no-style {{ with .Site.Params.TitleCutting }}site-name{{ end }}">{{ .Site.Title }}</a>:~# 
-              {{ range $index, $element := split $url "/" }}{{ $.Scratch.Add "path" $element }}{{ if ne $element "" }}<a href='{{ $.Scratch.Get "path" | absURL }}'>{{ . }}</a>/{{ $.Scratch.Add "path" "/" }}{{ end }}{{ end }}</div></header>
-          <nav class="terminal-menu">
+              <a href="{{ .Site.BaseURL }}" class="no-style {{ with .Site.Params.TitleCutting }}site-name{{ end }}">{{ .Site.Title }} /</a> 
+              <nav class="terminal-menu">
             <ul vocab="https://schema.org/" typeof="BreadcrumbList">
                 {{ range $index, $element := .Site.Params.navlinks }}
                 <li property="itemListElement" typeof="ListItem">
