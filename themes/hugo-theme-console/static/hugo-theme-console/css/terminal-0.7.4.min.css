@@ -117,11 +117,9 @@ h1,
 }
 
 h1::after {
-    content: "====================================================================================================";
     position: absolute;
     bottom: 5px;
     left: 0;
-    display: var(--display-h1-decoration)
 }
 
 h1+*,
@@ -209,6 +207,15 @@ pre code {
     font-style: normal;
     font-family: var(--font-stack);
     color: var(--font-color)
+}
+
+.logo a{
+    color:#151515;
+}
+
+
+.logo p{
+    font-size: 0.9em;
 }
 
 .terminal code {
@@ -321,13 +328,13 @@ ol ol {
 }
 
 .terminal-menu {
-    width: 100%
+    padding: calc(var(--global-space) * 2)0;
 }
 
 .terminal-nav {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 ul ul {
@@ -829,7 +836,8 @@ select:-webkit-autofill:focus {
 @media only screen and (width >=30em) {
     .terminal-nav {
         flex-direction: row;
-        align-items: center
+        align-items: center;
+        justify-content: space-between;
     }
 
     .terminal-menu ul {
