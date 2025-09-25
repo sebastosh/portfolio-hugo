@@ -24,6 +24,7 @@ echo {{ .Params.image }}
     {{ with .Site.GetPage "/projects" }}
     {{ range first 6 (sort .Pages "Date" "desc")}}
     <a href="{{ .Permalink }}" title="{{ .Title }}">
+        <h2>{{ .Title }}</h2>
         {{ $image := .Page.Resources.GetMatch .Params.image }}
         {{ with $image }}
         {{ $thumb := .Resize "400x" }}
