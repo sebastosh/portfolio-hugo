@@ -1,6 +1,6 @@
 {{ define "main" }}
 <h1>{{ .Page.Title }}</h1>
-
+<h2>test</h2>
 {{ if and (isset .Params "image") .Params.image }}
     {{ $image := .Page.Resources.GetMatch .Params.image }}
     {{ with $image }}
