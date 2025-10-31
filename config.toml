@@ -15,9 +15,5 @@ languageCode = "en-us"
   url = "about/"
 
  [[params.navlinks]]
-  name = "projects"
-  url = "projects/"
-
- [[params.navlinks]]
-  name = "clients"
-  url = "clients/"
+  name = "works"
+  url = "works/"

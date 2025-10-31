@@ -1,6 +1,0 @@
-+++
-title = "Clients"
-type = "gallery"
-+++
-
-
